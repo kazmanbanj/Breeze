@@ -14,15 +14,9 @@ use App\Http\Controllers\Student\TimetableController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['auth', 'verified'])->prefix('teacher')->name('teacher.')->group(function () {
+    Route::get('timetable', [TimetableController::class, 'index'])->name('timetable');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 
 require __DIR__.'/auth.php';
-require __DIR__.'/student.php';
-require __DIR__.'/teacher.php';
