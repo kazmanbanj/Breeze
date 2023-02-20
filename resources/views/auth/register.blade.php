@@ -45,6 +45,22 @@
                                 name="password_confirmation" required />
             </div>
 
+            <!-- Role -->
+            <div class="mt-4">
+                <x-label for="role_id" :value="__('Register as:')" />
+
+                <label>
+                    <x-input id="role_id" value="1"
+                                type="radio"
+                                name="role_id" required/> Student
+                </label>
+                <label class="ml-2">
+                    <x-input id="role_id" value="2"
+                                type="radio"
+                                name="role_id" required/> Teacher
+                </label>
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
