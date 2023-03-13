@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Student\TimetableController;
+use App\Http\Controllers\Teacher\TimetableController;
 
 /*
 |--------------------------------------------------------------------------
